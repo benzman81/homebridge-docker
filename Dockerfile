@@ -18,7 +18,9 @@ RUN apt-get update; \
     apt-get install -y nano vim
 
 # Install Homebridge
-RUN npm install -g homebridge --unsafe-perm
+#RUN npm install -g homebridge --unsafe-perm
+RUN npm install -g hap-nodejs@0.4.24 --unsafe-perm
+RUN npm install -g homebridge@0.4.19 --unsafe-perm
 
 # Final settings
 COPY avahi-daemon.conf /etc/avahi/avahi-daemon.conf
